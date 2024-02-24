@@ -94,7 +94,7 @@ PrefabInstance:
     - target: {fileID: 1159653550, guid: e0fcac846f148d04c85d5672dd643a35, type: 3}
       propertyPath: soundClipCry
       value: 
-      objectReference: {fileID: 8300000, guid: bf5f0772d31329f4abbfd9a92d08b40b, type: 3}
+      objectReference: {fileID: 8300000, guid: 386bbb2bbb6ea384dba6e97b535d9fad, type: 3}
     - target: {fileID: 6576419158971766285, guid: e0fcac846f148d04c85d5672dd643a35,
         type: 3}
       propertyPath: health
