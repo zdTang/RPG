@@ -1,6 +1,7 @@
 ﻿using RPG.Core;
 using RPG.Movement;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace RPG.Combat
 {
@@ -9,6 +10,11 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
 
         Transform target;
+        SoundPlayer soundPlayer;
+        private void Start()
+        {
+            soundPlayer = GetComponent<SoundPlayer>();
+        }
 
         private void Update()
         {
@@ -44,6 +50,11 @@ namespace RPG.Combat
         public void Cancel()
         {
             target = null;
+        }
+        // Animation Event
+        void Hit()
+        {
+            soundPlayer.PlayHit();
         }
     }
 }
