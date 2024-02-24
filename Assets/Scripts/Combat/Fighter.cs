@@ -66,8 +66,13 @@ namespace RPG.Combat
         {
             soundPlayer.PlayHit();
             Health healthComponent = target?.GetComponent<Health>();
+            SoundPlayer targetSP=target?.GetComponent<SoundPlayer>();
             if (healthComponent != null)
-            healthComponent.TakeDamage(weaponDamage);
+            {
+                healthComponent.TakeDamage(weaponDamage);
+                targetSP.PlaySoundCry();
+            }
+            
         }
     }
 }
